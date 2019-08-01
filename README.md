@@ -1,4 +1,4 @@
-# nodeJs-Socket.io
+# Chat-nodeJs-Socket.io
    Simple chat using nodeJs and Socket.io
 
 # Initialized Node Packages 
