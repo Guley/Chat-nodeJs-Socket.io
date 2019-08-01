@@ -1,9 +1,13 @@
 # nodeJs-Socket.io
-Simple chat using nodeJs and Socket.io
+   Simple chat using nodeJs and Socket.io
 
 # Initialized Node Packages 
 
-npm install
+    npm install
+
+# Start Chat Interface
+
+    nodemon index
 
 
 
