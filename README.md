@@ -9,5 +9,8 @@
 
     nodemon index
 
+# Screenshot
+
+<img src="https://github.com/Guley/Chat-nodeJs-Socket.io/blob/master/example.png">
 
 
