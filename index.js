@@ -1,6 +1,5 @@
 var express = require('express');
 var socket = require('socket.io');
-
 //App setup
 var app = new express();
 var server = app.listen(3000,function(){
@@ -18,7 +17,12 @@ var io = new socket(server);
 
 //Make socket connection
 io.on('connection',function(socket){
-    console.log('Socket connected successfully',socket.id);
+    console.log('Socket connected successfully');
+
+    io.on('disconnect', function(socket) {
+        
+        console.log('Socket disconnected',socket.id);
+    });
 
     //Receive message
     socket.on('chat',function(data){
@@ -30,6 +34,9 @@ io.on('connection',function(socket){
     })
     socket.on('logoff',function(data){
         socket.broadcast.emit('logoff',data);
+    })
+    socket.on('user-left',function(data){
+        socket.broadcast.emit('user-left',data);
     })
 })
 
